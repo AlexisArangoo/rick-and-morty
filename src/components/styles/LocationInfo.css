@@ -1,0 +1,42 @@
+.locationInfo{
+   width: 100%;
+    max-width: 450px;
+    background-color: var(--bg-card);
+    color: aliceblue;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 1rem #000;
+}
+
+.locationInfo_name{
+    text-align: center;
+    color: var(--color-green);
+    font-size: 1.2rem;
+}
+
+.locationInfo_list{
+    display: flex;
+    justify-content: space-between;
+   margin-top: 1rem;
+}
+.locationInfo_items{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.locationInfo_label{
+    font-size: 1rem;
+}
+
+.locationInfo_value{
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+
+
+
