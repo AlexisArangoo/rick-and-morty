@@ -6,7 +6,6 @@ import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import FormLocation from './components/FormLocation'
 import Pagination from './components/Pagination'
-import { colors } from 'react-select/dist/declarations/src/theme'
 
 function App() {
 const [location, setLocation] = useState()
@@ -92,7 +91,7 @@ useEffect(() => {
       </div>
       </>
       )
-      :(<h2 style={{textAlign: 'center'}}>No hay poblacion en esta location😣</h2>)
+      :(<h2 style={{textAlign: 'center', color: 'white'}}>No hay poblacion en esta location😣</h2>)
       }
       </>
       )

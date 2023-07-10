@@ -8,7 +8,7 @@ export const FormLocation = ({setIdLocation}) => {
 
     const [addLocation, setAddLocation] = useState([])
     const [stateSearch, setStateSearch ] = useState(true)
-    const [searchString, setSearchString] = useState('Nombre Location')
+    const [searchString, setSearchString] = useState('Name Location')
 
     const arrLocation = []
 

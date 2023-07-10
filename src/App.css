@@ -16,15 +16,11 @@
     gap: 2em;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 0 10px black;
-    border-radius: 10px;
+    width: 100%;
 }
 .container_pagination{
-    width: 80%;
+    width: 70%;
     margin: 0% auto;
-    margin-top: 20px;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
