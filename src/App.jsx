@@ -47,6 +47,7 @@ useEffect(() => {
       
     <FormLocation
     setIdLocation={setIdLocation}
+    setCurrentPage={setCurrentPage}
     />
 
     {

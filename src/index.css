@@ -39,3 +39,17 @@ button{
 img{
     display: block;
 }
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-green);
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+  
+*::-webkit-scrollbar:vertical {
+    width: 11px;
+}

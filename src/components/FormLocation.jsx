@@ -4,7 +4,7 @@ import getRandomNumber from "../utils/getRandomNumber"
 import './styles/FormLocation.css'
 import Select from "react-select"
 
-export const FormLocation = ({setIdLocation}) => {
+export const FormLocation = ({setIdLocation, setCurrentPage}) => {
 
     const [addLocation, setAddLocation] = useState([])
     const [stateSearch, setStateSearch ] = useState(true)
@@ -30,8 +30,10 @@ export const FormLocation = ({setIdLocation}) => {
         const inputValue= e.target.inputId.value.trim()
         if (inputValue === '' || inputValue === '0') {
             setIdLocation(getRandomNumber(126))
+            setCurrentPage(1)
         }else{
             setIdLocation(e.target.inputId.value.trim())  
+            setCurrentPage(1)
         }
         e.target.inputId.value = ''
     }

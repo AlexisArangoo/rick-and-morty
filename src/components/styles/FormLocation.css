@@ -55,12 +55,9 @@
 }
 
 .form_select{
-    position: absolute;
-    right: 20px;
-    padding: 0.5rem;
-    background-color: var(--bg-card);
-    color: var(--color-green);
     width: 15rem;
+    color: var(--color-green);
+    background-color: transparent ;
 }
 
 @media screen and (max-width: 600px) {
