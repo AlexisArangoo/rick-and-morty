@@ -13,6 +13,7 @@
 }
 .pagination-link.is-current{
     background-color: var(--color-green);
+    box-shadow: 0 0 15px #fff;
 }
 
 @media screen and (max-width: 768px) {
