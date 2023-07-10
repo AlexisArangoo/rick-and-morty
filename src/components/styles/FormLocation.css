@@ -42,7 +42,7 @@
     gap: 5px;
 }
 .form_input{
-    box-Shadow: 1px 1px 10px #000;
+    box-Shadow: 1px 1px 10px var(--color-shadow);
     width: 180px;
     padding: 0.3rem;
     border-radius: 5px 0 0 5px;

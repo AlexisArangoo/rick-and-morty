@@ -4,6 +4,9 @@
     border: none;
     box-shadow: 0 0 5px #fff5;
 }
+.btn:hover{
+    color: var(--color-green);
+}
 
 .pagination-link{
     background-color: var(--bg-card);

@@ -12,6 +12,7 @@ const [location, setLocation] = useState()
 const [idLocation, setIdLocation] = useState(getRandomNumber(126))
 const [hasError, setHasError] = useState(false)
 const [isLoading, setIsLoading] = useState(true)
+const [darkBoleam, setDarkBoleam] = useState(false)
 
 //estados paginacion:
 const [characterPerPage, setcharacterPerPage] = useState(12)
@@ -40,11 +41,15 @@ useEffect(() => {
 }, [idLocation])
 
 
+  const onDark = () => {
+    setDarkBoleam(!darkBoleam)
+  } 
+
   return (
     <div className='body'>
       
     <img className='header_img' src="/img/img-header.png" alt="" />
-      
+    
     <FormLocation
     setIdLocation={setIdLocation}
     setCurrentPage={setCurrentPage}
