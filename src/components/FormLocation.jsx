@@ -44,14 +44,14 @@ export const FormLocation = ({setIdLocation}) => {
         if (stateSearch) {
             setSearchString('ID Location')
         } else {
-            setSearchString('Nombre Location')
+            setSearchString('Name Location')
         }
     }
 
   return (
     <div className="container">
     <div className="container_search">
-        <span className="search_label">BUSCAR POR: </span>
+        <span className="search_label">To Look For: </span>
         <button onClick={search} className="search_btn">{searchString}</button>
     </div>
     <div className="container_form">
@@ -60,13 +60,14 @@ export const FormLocation = ({setIdLocation}) => {
         stateSearch
         ?(
     <form onSubmit={handleSubmit} className="form">
-        <input className="form_input" id="inputId" type="text" />
+        <input className="form_input" id="inputId" type="text" placeholder="Type the ID" />
         <button className="form_btn" style={{background: 'green', color: 'white'}}>Search</button>
     </form>
         )
         :(
             addLocation.length > 0 && (
                 <Select
+                placeholder='Enter the name'
                   className="form_select"
                   onChange={handleChange}
                   options={addLocation.map((id) => ({ label: id.name, value: id.id }))}

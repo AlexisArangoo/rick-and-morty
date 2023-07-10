@@ -5,12 +5,21 @@ import getRandomNumber from './utils/getRandomNumber'
 import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import FormLocation from './components/FormLocation'
+import Pagination from './components/Pagination'
 
 function App() {
 const [location, setLocation] = useState()
 const [idLocation, setIdLocation] = useState(getRandomNumber(126))
 const [hasError, setHasError] = useState(false)
 const [isLoading, setIsLoading] = useState(true)
+
+//estados paginacion:
+const [characterPerPage, setcharacterPerPage] = useState(12)
+const [currentPage, setCurrentPage] = useState(1)
+
+const totalcharacter = location?.residents.length
+const lastIndex = currentPage * characterPerPage
+const firstIndex = lastIndex - characterPerPage
 
 useEffect(() => {
 
@@ -29,7 +38,6 @@ useEffect(() => {
       setIsLoading(false)
     })
 }, [idLocation])
-
 
 
   return (
@@ -63,8 +71,17 @@ useEffect(() => {
              key={url}
              url={url}
             />
-          ))
+          )).slice(firstIndex, totalcharacter <= 12 ? totalcharacter : lastIndex)
         }
+
+      </div>
+      <div className='container_pagination'>
+        <Pagination
+        characterPerPage={characterPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalcharacter={totalcharacter}
+        />
       </div>
       </>
       )

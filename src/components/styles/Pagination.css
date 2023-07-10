@@ -1,0 +1,24 @@
+.btn{
+    background-color: var(--bg-card);
+    color: white;
+    border: none;
+    box-shadow: 0 0 5px #fff5;
+}
+
+.pagination-link{
+    background-color: var(--bg-card);
+    color: white;
+    border: none;
+    box-shadow: 0 0 5px #fff5;
+}
+.pagination-link.is-current{
+    background-color: var(--color-green);
+}
+
+@media screen and (max-width: 768px) {
+    .btn{
+        max-width: 100px;
+        margin: 20px;
+    }
+    
+}

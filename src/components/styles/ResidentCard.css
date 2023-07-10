@@ -2,7 +2,7 @@
     background-color: var(--bg-card);
     color: aliceblue;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 0.8rem;
     overflow: hidden;
     transition: tranform 200ms ease;
