@@ -6,6 +6,7 @@ import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import FormLocation from './components/FormLocation'
 import Pagination from './components/Pagination'
+import { colors } from 'react-select/dist/declarations/src/theme'
 
 function App() {
 const [location, setLocation] = useState()
@@ -63,7 +64,12 @@ useEffect(() => {
         <LocationInfo
          location={location}
         />
-      <div className='resident_container'>
+      
+      {
+      totalcharacter > 0
+      ?(
+        <>
+        <div className='resident_container'>
 
         {
           location?.residents.map(url => (
@@ -74,8 +80,9 @@ useEffect(() => {
           )).slice(firstIndex, totalcharacter <= 12 ? totalcharacter : lastIndex)
         }
 
-      </div>
-      <div className='container_pagination'>
+       </div>
+
+        <div className='container_pagination'>
         <Pagination
         characterPerPage={characterPerPage}
         currentPage={currentPage}
@@ -83,6 +90,10 @@ useEffect(() => {
         totalcharacter={totalcharacter}
         />
       </div>
+      </>
+      )
+      :(<h2 style={{textAlign: 'center'}}>No hay poblacion en esta location😣</h2>)
+      }
       </>
       )
       )
